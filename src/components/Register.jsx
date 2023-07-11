@@ -20,10 +20,8 @@ export const Register = (props) => {
         });
         const data = await response.json();
         if (data.codigo) {
-            // handle error
             console.error(data.descricao);
         } else {
-            // handle success
             console.log(data);
             navigate('/');
         }
