@@ -8,7 +8,7 @@ const logo = "https://upload.wikimedia.org/wikipedia/commons/6/67/NewNetflixLogo
 export const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [errorMsg, setErrorMsg] = useState(''); // add this state to handle error message
+  const [errorMsg, setErrorMsg] = useState('');
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
