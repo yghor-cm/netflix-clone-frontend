@@ -1,5 +1,9 @@
+import './Login.css';
+
 import React, { useState } from "react";
 import { Link, useNavigate } from 'react-router-dom';
+
+const logo = "https://upload.wikimedia.org/wikipedia/commons/6/67/NewNetflixLogo.png";
 
 export const Login = () => {
   const [email, setEmail] = useState('');
@@ -38,19 +42,22 @@ export const Login = () => {
   }
 
   return (
+    <>
+    <img className="nav-logo-login" src={logo} alt="NetFlix"></img>
     <div className="auth-form-container">
-      <h2>Login</h2>
       {errorMsg && <div className="error">{errorMsg}</div>}
       <form className="login-form" onSubmit={handleSubmit}>
+      <h2>Login</h2>
         <label htmlFor="email">E-mail: </label>
         <input value={email} onChange={(e) => setEmail(e.target.value)} type="email" placeholder="youremail@gmail.com" id="email" name="email" />
         <label htmlFor="password">Senha: </label>
         <input value={password} onChange={(e) => setPassword(e.target.value)} type="password" placeholder="********" id="password" name="password" />
         <button type="submit">Login</button>
-      </form>
-      <Link to="/register" className="link-btn">
+        <Link to="/register" className="link-btn">
         Não possui conta? Cadastre-se
       </Link>
+      </form>
     </div>
+    </>
   );
 };

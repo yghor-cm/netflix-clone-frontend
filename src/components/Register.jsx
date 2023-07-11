@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from 'react-router-dom';
 
+const logo = "https://upload.wikimedia.org/wikipedia/commons/6/67/NewNetflixLogo.png";
+
 export const Register = (props) => {
     const [email, setEmail] = useState('');
     const [pass, setPass] = useState('');
@@ -28,9 +30,11 @@ export const Register = (props) => {
     }
 
     return (
+        <>
+    <img className="nav-logo-login" src={logo} alt="NetFlix"></img>
         <div className="auth-form-container">
-            <h2>Registrar</h2>
         <form className="register-form" onSubmit={handleSubmit}>
+        <h2>Registrar</h2>
             <label htmlFor="name">Nome completo: </label>
             <input value={name} name="name" onChange={(e) => setName(e.target.value)} id="name" placeholder="Nome completo" />
             <label htmlFor="email">E-mail: </label>
@@ -38,10 +42,11 @@ export const Register = (props) => {
             <label htmlFor="password">Senha: </label>
             <input value={pass} onChange={(e) => setPass(e.target.value)} type="password" placeholder="********" id="password" name="password" />
             <button type="submit">Registrar</button>
-        </form>
-        <Link to="/" className="link-btn">
+            <Link to="/" className="link-btn">
       Já possui conta? Faça o login.
     </Link>
+        </form>
     </div>
+    </>
     )
 }
