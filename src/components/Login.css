@@ -17,6 +17,15 @@
   max-height: 400px;
 }
 
+.register-form {
+  background-color: #2c2c2c; 
+  padding: 2rem; 
+  border-radius: 15px; 
+  width: 50%; 
+  max-width: 400px; 
+  max-height: 400px;
+}
+
 img.nav-logo-login {
   width: 10rem;
   margin: 1rem;
