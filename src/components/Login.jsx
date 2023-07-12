@@ -20,11 +20,12 @@ export const Login = () => {
     };
 
     try {
-      const response = await fetch('http://localhost:8080/Login', {
+      const response = await fetch('http://localhost:8080/netflix/Login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
+        credentials: 'include',
         body: JSON.stringify(requestBody)
       });
 
@@ -37,6 +38,7 @@ export const Login = () => {
         setErrorMsg(data.descricao);
       }
     } catch (error) {
+      console.log(error)
       setErrorMsg('Ocorreu um erro ao realizar o login.');
     }
   }

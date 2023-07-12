@@ -11,7 +11,7 @@ export const Register = (props) => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const response = await fetch('http://localhost:8080/Register', {  
+        const response = await fetch('http://localhost:8080/netflix/Register', {  
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

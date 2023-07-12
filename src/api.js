@@ -1,4 +1,4 @@
-const API_DNS = "http://localhost:8080/medias"
+const API_DNS = "http://localhost:8080"
 
 export const categories = [
     {
@@ -28,13 +28,13 @@ export const categories = [
     {
         name: "romances",
         title: "Romances",
-        path: "/romance",
+        path: "/romances",
         isLarge: false
     },
     {
         name: "documentaries",
         title: "Documentários",
-        path: "/documentary",
+        path: "/documentaries",
         isLarge: false
     }
 ]
